@@ -5,6 +5,6 @@
 2. conda env create -f=env_name.yml
 
 ## Usage
-conda activate HST
-jupyter lab
-open section_isolator.ipynb
+1. conda activate HST
+2. jupyter lab
+3. open section_isolator.ipynb
