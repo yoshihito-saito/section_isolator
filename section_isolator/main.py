@@ -1,3 +1,4 @@
+import os
 from PIL import Image
 import numpy as np
 from scipy import ndimage
@@ -8,6 +9,7 @@ import matplotlib.pyplot as plt
 
 def section_isolator(data_list, output_dir):   
     Image.MAX_IMAGE_PIXELS = 1000000000
+    os.makedirs(output_dir, exist_ok=True)
     count=0
     for l in range(len(data_list)):
         data_path=data_list[l]
