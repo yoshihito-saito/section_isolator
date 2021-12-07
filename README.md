@@ -12,9 +12,9 @@
 ## Data
 撮像したスライド画像のパスをリスト形式で入力。
 
-例えば folder1/01_slide, folder1/02_slide, folder1/03_slide となっていれば、
+例えば folder1/01_slide.tif, folder1/02_slide.tif, folder1/03_slide.tif となっていれば、
 
-data_list = [folder1/01_slide, folder1/02_slide, folder1/03_slide]
+data_list = [folder1/01_slide.tif, folder1/02_slide.tif, folder1/03_slide.tif]
 
 として、入力。
 
