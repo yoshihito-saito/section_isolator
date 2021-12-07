@@ -8,3 +8,8 @@
 1. conda activate HST
 2. jupyter lab
 3. open section_isolator.ipynb
+
+
+## Tips
+きれいに切片を貼る必要がある。
+切片間の距離を詰めすぎない！！
