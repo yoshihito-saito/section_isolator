@@ -16,8 +16,6 @@
 
 data_list = [folder1/01_slide.tif, folder1/02_slide.tif, folder1/03_slide.tif]
 
-として、入力。
-
 ## Tips
 切片は左上から縦に貼っていったものに対応。
 
