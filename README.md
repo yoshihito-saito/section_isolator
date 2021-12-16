@@ -2,7 +2,7 @@
 ![section_isolator](https://user-images.githubusercontent.com/61833067/144965045-e983cca4-f713-49b6-bf29-88df3f0db54d.png)
 ## Create enviroment
 1. download zip -> unzip
-2. conda env create -f=env_name.yml
+2. conda env create -f=env_hst.yml
 
 ## Usage
 1. conda activate HST
