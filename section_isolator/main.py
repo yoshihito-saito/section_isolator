@@ -7,7 +7,8 @@ from skimage import filters
 from skimage import measure
 import matplotlib.pyplot as plt
 
-def section_isolator(data_list, output_dir):   
+def section_isolator(data_list, output_dir):
+    Image.MAX_IMAGE_PIXELS = 1000000000
     count=0
     for l in range(len(data_list)):
         data_path=data_list[l]
