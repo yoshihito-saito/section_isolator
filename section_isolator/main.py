@@ -1,3 +1,4 @@
+import os
 from PIL import Image
 import numpy as np
 from scipy import ndimage
@@ -7,7 +8,6 @@ from skimage import measure
 import matplotlib.pyplot as plt
 
 def section_isolator(data_list, output_dir):   
-    Image.MAX_IMAGE_PIXELS = 1000000000
     count=0
     for l in range(len(data_list)):
         data_path=data_list[l]
@@ -57,13 +57,14 @@ def section_isolator(data_list, output_dir):
                 a=counters[i].tolist()
                 counters_clean.append(a)
 
-        buf = 50
+        buf = 100
         for m,n in enumerate(order):
             rngx = (int(np.min(np.array(counters_clean[n])[:,1])) - buf, int(np.max(np.array(counters_clean[n])[:,1])) + buf)
             rngy = (int(np.min(np.array(counters_clean[n])[:,0])) - buf, int(np.max(np.array(counters_clean[n])[:,0])) + buf)
-            cropped = np.zeros((max(rngy) - min(rngy),max(rngx) - min(rngx),3), dtype = "uint8")
-            for i in range(3):
-                cropped[:,:,i] = np.where(close_img[rngy[0]:rngy[1],rngx[0]:rngx[1]]==True, img[rngy[0]:rngy[1],rngx[0]:rngx[1],i],0)
+            cropped = img[min(rngy):max(rngy),min(rngx):max(rngx),:]
+        #     cropped = np.zeros((max(rngy) - min(rngy),max(rngx) - min(rngx),3), dtype = "uint8")
+        #     for i in range(3):
+        #         cropped[:,:,i] = np.where(close_img[rngy[0]:rngy[1],rngx[0]:rngx[1]]==True, img[rngy[0]:rngy[1],rngx[0]:rngx[1],i],0)
             cropped_img = Image.fromarray(cropped)
             cropped_img.save(output_dir + "section{:03}.tif".format(m+count), quality=100)
         count += len(order)
