@@ -10,17 +10,17 @@
 3. open section_isolator.ipynb
 
 ## Data
-撮像したスライド画像のパスをリスト形式で入力。
+Create a list of paths of the slide images.
 
-例えば folder1/01_slide.tif, folder1/02_slide.tif, folder1/03_slide.tif となっていれば、
+Example:
 
 data_list = [folder1/01_slide.tif, folder1/02_slide.tif, folder1/03_slide.tif]
 
 ## Tips
-切片は左上から縦に貼っていったものに対応。
+The slice corresponds to the one pasted vertically from the top left.
 
-きれいに切片を貼る必要がある。
+It is necessary to paste the slices carefully.
 
-切片間の距離を詰めすぎない！！
+The distance between the slices should not be too close!
 
 
